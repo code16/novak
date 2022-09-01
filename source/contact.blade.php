@@ -1,4 +1,9 @@
-
+@php
+/**
+ * @var \Code16\JockoClient\Page $page
+ * @var \TightenCo\Jigsaw\PageVariable|\Code16\JockoClient\Page[] $pages
+ */
+@endphp
 
 <x-layout :page="$page = $pages->firstWhere('key', 'contact')">
     <div class="p-8">

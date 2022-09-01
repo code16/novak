@@ -1,6 +1,8 @@
 @php
 /**
- * @var \TightenCo\Jigsaw\Collection\CollectionItem[] $posts
+ * @var \Code16\JockoClient\Page $page
+ * @var \TightenCo\Jigsaw\PageVariable|\Code16\JockoClient\Page[] $pages
+ * @var \TightenCo\Jigsaw\PageVariable|\Code16\JockoClient\Page[] $posts
  */
 @endphp
 
@@ -10,9 +12,9 @@
             {{ $page->title }}
         </h1>
 
-        <div class="my-4">
+        <x-content class="my-4">
             {!! $page->getContent() !!}
-        </div>
+        </x-content>
 
         <ul>
             @foreach($posts as $post)

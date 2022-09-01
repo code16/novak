@@ -1,8 +1,9 @@
 <?php
 
-use Code16\JockoClient\FetchCollections;
+use Illuminate\Container\Container;
+use Illuminate\View\Factory;
 
-/** @var $container \Illuminate\Container\Container */
+/** @var $container Container */
 /** @var $events \TightenCo\Jigsaw\Events\EventBus */
 
 /**
@@ -16,4 +17,11 @@ use Code16\JockoClient\FetchCollections;
  * });
  */
 
-$events->beforeBuild(FetchCollections::class);
+
+\Code16\JockoClient\Listeners::register($events);
+
+function view(string $view, array $data = [])
+{
+    return Container::getInstance()->make(Factory::class)
+        ->make($view, $data);
+}

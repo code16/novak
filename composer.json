@@ -8,5 +8,10 @@
             "type": "path",
             "url": "../jocko-client"
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Components\\": "components"
+        }
     }
 }
