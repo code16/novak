@@ -1,0 +1,12 @@
+{
+    "require": {
+        "tightenco/jigsaw": "^1.3",
+        "code16/jocko-client": "@dev"
+    },
+    "repositories": {
+        "jocko-client": {
+            "type": "path",
+            "url": "../jocko-client"
+        }
+    }
+}
