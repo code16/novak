@@ -1,22 +1,20 @@
 <?php
 
 return [
-    'production' => false,
     'baseUrl' => '',
-    'title' => 'Novak',
-    'description' => 'Website description.',
+    'production' => false,
+    'siteName' => 'Novak', // todo
+    'siteDescription' => 'Website description.', // todo
+    
     'collections' => [
-        'pages' => [
-            'path' => 'pages',
-            'extends' => '_layouts.page',
-            'section' => 'content',
-        ],
+        'pages' => [],
         'posts' => [
             'path' => 'posts',
             'extends' => '_layouts.post',
             'section' => 'content',
         ],
     ],
+    
     'jocko_api' => [
         'url' => env('JOCKO_API_URL'),
         'token' => env('JOCKO_API_TOKEN'),
