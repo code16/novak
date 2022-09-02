@@ -7,15 +7,28 @@ use Illuminate\View\Component;
 
 class Content extends Component
 {
-    public function transform(string $content)
+    public function __construct(
+        public ?int $imageThumbnailWidth = null,
+        public ?int $imageThumbnailHeight = null,
+    ) {
+    }
+    
+    public function transform(string $content): string
     {
-        $content = preg_replace_callback('/<img src="(.+)".*>/sU', function($matches) {
-            return Blade::render('<x-content-image :src="$src"></x-content-image>', [
-                'src' => $matches[1],
-            ]);
-        }, $content);
+        $content = $this->transformImages($content);
         
         return $content;
+    }
+    
+    public function transformImages(string $content): string
+    {
+        return preg_replace_callback(
+            '/<p>\s*<img src="([^"]+)" alt="([^"]*)"[^>]*>\s*<\/p>/',
+            function ($matches) {
+                return Blade::render('<x-content-image :src="$src" :alt="$alt" />', ['src' => $matches[1], 'alt' => $matches[2]]);
+            },
+            $content
+        );
     }
     
     public function render()

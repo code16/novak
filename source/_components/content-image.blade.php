@@ -1,7 +1,21 @@
+@aware([
+    'imageThumbnailWidth',
+    'imageThumbnailHeight',
+])
 @props([
-    'src',
+    'width' => $imageThumbnailWidth ?? 1024,
+    'height' => $imageThumbnailHeight,
 ])
 
 <p>
-    <img class="" src="{{ $src }}" alt="">
+    <img class="max-w-full"
+        src="{{ $image->thumbnail($width, $height) }}"
+        alt="{{ $alt }}"
+        @if($width)
+            width="{{ $width }}"
+        @endif
+        @if($height)
+            height="{{ $height }}"
+        @endif
+    >
 </p>
