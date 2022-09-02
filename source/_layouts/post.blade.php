@@ -12,11 +12,15 @@
             <img src="{{ $page->cover->thumbnail(500, 500) }}" alt="{{ $page->title }}">
         @endif
 
-        <x-content
-            :image-thumbnail-width="1024"
-        >
+        <x-content :image-thumbnail-width="1024">
             {!! $page->getContent() !!}
         </x-content>
+
+        <div class="flex gap-4 mt-16">
+            @foreach($page->visuals as $visual)
+                <img src="{{ $page->image($visual)->thumbnail(150) }}" alt="">
+            @endforeach
+        </div>
     </div>
 </x-layout>
 
