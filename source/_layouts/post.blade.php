@@ -1,6 +1,6 @@
 @php
 /**
- * @var \Code16\JockoClient\Page $page
+ * @var \Code16\Jigsaw\Page $page
  */
 @endphp
 

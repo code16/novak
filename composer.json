@@ -1,14 +1,14 @@
 {
     "require": {
         "tightenco/jigsaw": "^1.3",
-        "code16/jocko-client": "@dev"
+        "code16/jigsaw": "@dev"
     },
-    "repositories": {
-        "jocko-client": {
+    "repositories": [
+        {
             "type": "path",
-            "url": "../jocko-client"
+            "url": "../jigsaw"
         }
-    },
+    ],
     "autoload": {
         "psr-4": {
             "Components\\": "components"

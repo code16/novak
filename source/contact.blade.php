@@ -1,7 +1,7 @@
 @php
 /**
- * @var \Code16\JockoClient\Page $page
- * @var \TightenCo\Jigsaw\PageVariable|\Code16\JockoClient\Page[] $pages
+ * @var \Code16\Jigsaw\Page $page
+ * @var \TightenCo\Jigsaw\PageVariable|\Code16\Jigsaw\Page[] $pages
  */
 @endphp
 

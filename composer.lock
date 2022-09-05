@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b6995faa1162c47072ab4ef1096e825",
+    "content-hash": "5be2d8f0a087a3475ad7690f63623c7c",
     "packages": [
         {
-            "name": "code16/jocko-client",
+            "name": "code16/jigsaw",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "../jocko-client",
-                "reference": "2916be4c021065bf7a7eee3636ae3ca8f383aefa"
+                "url": "../jigsaw",
+                "reference": "28970e0437dda920095d462ad63138ac81dea969"
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.5",
@@ -25,12 +25,15 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Code16\\JockoClient\\": "src"
-                }
+                    "Code16\\Jigsaw\\": "src"
+                },
+                "files": [
+                    "src/Support/helpers.php"
+                ]
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Code16\\JockoClient\\Tests\\": "tests"
+                    "Code16\\Jigsaw\\Tests\\": "tests"
                 }
             },
             "scripts": {
@@ -51,10 +54,10 @@
                     "role": "Developer"
                 }
             ],
-            "homepage": "https://github.com/code16/jocko-client",
+            "homepage": "https://github.com/code16/jigsaw",
             "keywords": [
                 "code16",
-                "jocko-client"
+                "jigsaw"
             ],
             "transport-options": {
                 "relative": true
@@ -2999,16 +3002,16 @@
         },
         {
             "name": "tightenco/jigsaw",
-            "version": "v1.3.43",
+            "version": "v1.3.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tighten/jigsaw.git",
-                "reference": "6adac0cc0a5407997f5415046e324e796a95ea42"
+                "reference": "ccda0ab7dea421de7837cccc3b5f22ff697753a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tighten/jigsaw/zipball/6adac0cc0a5407997f5415046e324e796a95ea42",
-                "reference": "6adac0cc0a5407997f5415046e324e796a95ea42",
+                "url": "https://api.github.com/repos/tighten/jigsaw/zipball/ccda0ab7dea421de7837cccc3b5f22ff697753a0",
+                "reference": "ccda0ab7dea421de7837cccc3b5f22ff697753a0",
                 "shasum": ""
             },
             "require": {
@@ -3069,9 +3072,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tighten/jigsaw/issues",
-                "source": "https://github.com/tighten/jigsaw/tree/v1.3.43"
+                "source": "https://github.com/tighten/jigsaw/tree/v1.3.45"
             },
-            "time": "2022-08-10T17:01:47+00:00"
+            "time": "2022-09-04T23:40:21+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3232,7 +3235,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "code16/jocko-client": 20
+        "code16/jigsaw": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
