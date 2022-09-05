@@ -1,10 +1,13 @@
 
 
 module.exports = {
-  content: require('fast-glob').sync([
-    'source/**/*.{blade.php,blade.md,md,html,vue}',
-    '!source/**/_tmp/*' // exclude temporary files
-  ],{ dot: true }),
+  content: [
+    './source/_components/**/*.blade.php',
+    './source/_layouts/**/*.blade.php',
+    ...require('fast-glob').sync([
+        './source/*.blade.php'
+    ]),
+  ],
   theme: {
     extend: {
       colors: {
