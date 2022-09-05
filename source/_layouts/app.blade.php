@@ -23,6 +23,14 @@
         @endif
     </head>
     <body class="text-gray-900 font-sans antialiased">
-        {{ $slot }}
+        <div class="flex flex-col min-h-screen">
+            <x-header />
+            <div class="flex-grow">
+                <x-container>
+                    {{ $slot }}
+                </x-container>
+            </div>
+            <x-footer />
+        </div>
     </body>
 </html>
