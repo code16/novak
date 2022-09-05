@@ -6,7 +6,11 @@ module.exports = {
     '!source/**/_tmp/*' // exclude temporary files
   ],{ dot: true }),
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: 'var(--primary)',
+      }
+    },
   },
   plugins: [],
 };

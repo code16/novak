@@ -16,11 +16,13 @@
             {!! $page->getContent() !!}
         </x-content>
 
-        <div class="flex gap-4 mt-16">
-            @foreach($page->visuals as $visual)
-                <img src="{{ $page->image($visual)->thumbnail(150) }}" alt="">
-            @endforeach
-        </div>
+        @if(count($page->visuals ?? []))
+            <div class="flex gap-4 mt-16">
+                @foreach($page->visuals as $visual)
+                    <img src="{{ $page->image($visual)->thumbnail(150) }}" alt="">
+                @endforeach
+            </div>
+        @endif
     </div>
 </x-layout>
 
