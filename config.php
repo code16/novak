@@ -7,7 +7,7 @@ return [
     'siteDescription' => 'Website description.', // todo
     
     'collections' => [
-        'pages' => [],
+        'pages' => [], // pages collection aimed to be queried in specific blade file. (e.g $pages->firstWhere('key', 'home'))
         'posts' => [
             'path' => 'posts',
             'extends' => '_layouts.post',
