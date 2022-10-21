@@ -16,7 +16,7 @@
     </x-content>
 
     @if(count($page->visuals ?? []))
-        <div class="flex gap-4 mt-16">
+        <div class="flex gap-4 mt-16 flex-wrap">
             @foreach($page->visuals as $visual)
                 <img src="{{ $page->image($visual)->thumbnail(150) }}" alt="">
             @endforeach

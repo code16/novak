@@ -7,15 +7,16 @@
     'height' => $imageThumbnailHeight,
 ])
 
+@php
+/**
+ * @var \Code16\Jigsaw\Image $image
+ */
+@endphp
+
 <p>
-    <img class="max-w-full"
-        src="{{ $image->thumbnail($width, $height) }}"
+    <img src="{{ $image->thumbnail($width, $height) }}"
+        srcset="{{ $image->thumbnail($width, $height) }} 1x, {{ $image->thumbnail($width, $height, 1.5) }} 1.5x"
         alt="{{ $alt }}"
-        @if($width)
-            width="{{ $width }}"
-        @endif
-        @if($height)
-            height="{{ $height }}"
-        @endif
+        width="{{ $width }}"
     >
 </p>
