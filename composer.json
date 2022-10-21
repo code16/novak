@@ -1,11 +1,11 @@
 {
     "require": {
-        "code16/jigsaw": "@dev"
+        "code16/jigsaw": "dev-main"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:code16/jigsaw.git"
+            "url": "https://github.com/code16/jigsaw"
         }
     ],
     "require-dev": {
