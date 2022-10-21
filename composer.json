@@ -4,8 +4,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../jigsaw"
+            "type": "vcs",
+            "url": "git@github.com:code16/jigsaw.git"
         }
     ],
     "autoload": {
