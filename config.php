@@ -17,7 +17,7 @@ return [
     
     'jocko_api' => [
         'url' => env('JOCKO_API_URL'),
-        'token' => env('JOCKO_API_TOKEN'),
+        'token' => env('JOCKO_API_TOKEN', ''),
         'cache' => env('JOCKO_API_CACHE', false),
     ],
 ];
