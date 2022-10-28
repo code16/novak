@@ -4,6 +4,9 @@
     color: var(--primary);
     text-decoration: underline;
   }
+  & p {
+    margin-bottom: 1rem;
+  }
   & > :first-child {
     margin-top: 0;
   }
