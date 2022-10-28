@@ -5,7 +5,7 @@
  */
 @endphp
 
-<x-layout :page="$page = $pages->firstWhere('key', 'home')">
+<x-layout :page="$page = $pages->firstWhere('key', 'home')" title="">
     <h1 class="text-3xl font-bold">
         {{ $page->title }}
     </h1>
