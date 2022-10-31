@@ -1,3 +1,7 @@
 [build]
+# pushed assets config (prod)
+# NPM_FLAGS = "--version" # prevent running npm install
+# command = "./vendor/bin/jigsaw build production"
+# dev
 command = "npm run prod"
 publish = "build_production"
