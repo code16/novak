@@ -3,7 +3,7 @@
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Novak', // todo
+    'siteName' => 'Jocko Blog', // todo
     'siteDescription' => 'Website description.', // todo
     
     'collections' => [
