@@ -1,7 +1,10 @@
 [build]
-# pushed assets config (prod)
-# NPM_FLAGS = "--version" # prevent running npm install
-# command = "./vendor/bin/jigsaw build production"
-# dev
-command = "npm run prod"
 publish = "build_production"
+command = "npm run prod"
+
+[context.production]
+NPM_FLAGS = "--version" # prevent running npm install
+command = "./vendor/bin/jigsaw build production"
+
+[build.environment]
+PHP_VERSION = "8.1"
