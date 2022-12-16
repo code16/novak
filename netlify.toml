@@ -1,10 +1,8 @@
 [build]
 publish = "build_production"
 command = "npm run prod"
+environment = { PHP_VERSION = "8.1" }
 
 [context.production]
-NPM_FLAGS = "--version" # prevent running npm install
-command = "./vendor/bin/jigsaw build production"
-
-[build.environment]
-PHP_VERSION = "8.1"
+command = "./vendor/bin/jigsaw build production" # only build HTML files in production
+environment = { NPM_FLAGS = "--version" } # prevent running npm install
